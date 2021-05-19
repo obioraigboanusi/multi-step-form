@@ -1,0 +1,322 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-image: radial-gradient(dodgerblue, rgb(28, 77, 223));
+  display: flex;
+  align-items: center;
+}
+
+h2 {
+  color: dodgerblue;
+  font-weight: bolder;
+}
+
+button {
+  cursor: pointer;
+  transition: transform .05s ease-in;
+}
+
+button:active {
+  transform: scale(1.2);
+}
+
+.container {
+  background-color: #fff;
+  width: 90%;
+  margin: auto;
+  max-width: 700px;
+}
+
+.container .inner {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding: 2rem 0;
+  overflow-x: hidden;
+}
+
+.progress-step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  user-select: none;
+}
+
+.progress-step .step {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+
+.progress-step .step>p {
+  margin-bottom: 1rem;
+  transform: translateX(-40%);
+  font-weight: bolder;
+}
+
+.progress-step .step.active p {
+  color: dodgerblue;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+}
+
+.progress-step .bar .circle {
+  position: relative;
+  height: 25px;
+  min-width: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  justify-content: center;
+  border: 2px solid black;
+  color: black;
+}
+
+.progress-step .step.active .circle {
+  background-color: dodgerblue;
+  border-color: dodgerblue;
+  color: white;
+}
+
+.progress-step .circle>span {
+  position: absolute;
+  font-size: .8rem;
+}
+
+.progress-step .step.active .circle>span.step-num {
+  display: none;
+}
+
+.progress-step .step .circle>span.check {
+  display: none;
+}
+
+.progress-step .step.active .circle>span.check {
+  display: inline;
+}
+
+.progress-step .step .bar .extention {
+  height: 4px;
+  width: 100%;
+  margin: auto;
+  background-color: black;
+}
+
+.progress-step .step.active .extention {
+  background-color: dodgerblue;
+}
+
+.progress-step .step:last-of-type .extention {
+  display: none;
+}
+
+.progress-step .step:last-of-type {
+  margin-right: -2rem;
+}
+
+/* form styles */
+
+form {
+  margin-top: 2rem;
+  width: 600%;
+  display: flex;
+  overflow-x: hidden;
+}
+
+.slide {
+  display: block;
+  border: none;
+  display: grid;
+  width: 16.666666666666664%;
+  overflow-x: hidden;
+  align-self: flex-start;
+  transition: margin-left .5s ease-in;
+}
+
+button {
+  padding: .5rem 1rem;
+  min-width: 100px;
+  text-transform: capitalize;
+  background-color: dodgerblue;
+  border: none;
+  align-self: center;
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.next:hover, .prev:hover {
+  background-color: rgb(2, 111, 221);
+}
+
+.buttons-1 {
+  text-align: right;
+}
+
+div.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.next-1 {
+  margin-left: auto;
+}
+
+.slide h3, legend {
+  text-align: left;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+form label {
+  text-transform: capitalize;
+  text-align: left;
+}
+
+input, select {
+  padding: .5rem 1rem;
+  border: none;
+  border: 1px solid lightgray;
+  background-color: transparent;
+}
+
+select {
+  min-width: 250px;
+}
+
+input:focus, select:focus {
+  outline: 2px solid dodgerblue;
+}
+
+option {
+  text-transform: capitalize;
+}
+
+label {
+  height: 100%;
+  width: 100%;
+}
+
+.form-field label, .form-field p, .radio-field p, .radio-field label {
+  font-size: 1rem;
+  text-align: left;
+}
+
+.radio-field, .form-field {
+  margin-bottom: 1rem;
+}
+
+.radio-field p {
+  margin-bottom: .5rem;
+}
+
+.radio-field>div {
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.radio-field>div label:first-of-type {
+  margin-right: 2rem;
+}
+
+.form-field input {
+  width: 100%;
+}
+
+.form-field {
+  text-align: left;
+}
+
+input[type='radio'] {
+  margin-top: 0;
+  border: 1px solid red;
+}
+
+input {
+  margin-top: 5px;
+}
+
+.form-4 input.w-5 {
+  max-width: 300px;
+  display: block;
+}
+
+.form-5 .rental-fields>div {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-bottom: .5rem;
+}
+
+.form-5 .rental-fields>div {
+  display: flex;
+  align-items: flex-end !important;
+  font-size: 1rem;
+}
+
+.form-5 .form-field>div:nth-of-type(2) {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: .5rem;
+}
+
+.form-5 .form-field>div:nth-of-type(2) button {
+  font-size: .8rem;
+  background-color: #fff;
+  color: dodgerblue;
+  border: 1px solid dodgerblue;
+  font-weight: bold;
+}
+
+.form-5 .form-field>div:nth-of-type(2) button:hover {
+  background-color: rgb(239, 246, 255);
+}
+
+.form-5 .form-field .total span {
+  font-weight: bolder;
+}
+
+.form-5 .form-field p.total {
+  font-weight: normal;
+}
+
+.form-5 .form-field>p {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+@media screen and (min-width: 800px) {
+  .form-field.adjust {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    justify-content: space-between;
+  }
+  .form-3 .form-field.adjust {
+    grid-template-columns: 40% 55%;
+  }
+  select {
+    min-width: 100px;
+  }
+
+  .form-5 .rental-fields>div {
+    display: grid;
+    grid-template-columns: 30% 50%;
+  }
+}
