@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Multi Step Form</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="inner">
+      <header>
+        <h2>Applicant 1 Details</h2>
+        <p>Please complete the following steps to sign up.</p>
+      </header>
+      <div class="progress-step">
+        <div class="step">
+          <p>Step 1</p>
+          <div class="bar ">
+            <div class="circle">
+              <span class="step-num">1</span>
+              <span class="check">o</span>
+            </div>
+            <div class="extention" id=""></div>
+          </div>
+        </div>
+        <div class="step">
+          <p>Step 2</p>
+          <div class="bar">
+            <div class="circle">
+              <span class="step-num">2</span>
+              <span class="check">o</span>
+            </div>
+            <div class="extention"></div>
+          </div>
+        </div>
+        <div class="step">
+          <p>Step 3</p>
+          <div class="bar">
+            <div class="circle">
+              <span class="step-num">3</span>
+              <span class="check">o</span>
+            </div>
+            <div class="extention"></div>
+          </div>
+        </div>
+        <div class="step">
+          <p>Step 4</p>
+          <div class="bar">
+            <div class="circle">
+              <span class="step-num">4</span>
+              <span class="check">o</span>
+            </div>
+            <div class="extention"></div>
+          </div>
+        </div>
+        <div class="step">
+          <p>Step 5</p>
+          <div class="bar">
+            <div class="circle">
+              <span class="step-num">4</span>
+              <span class="check">o</span>
+            </div>
+            <div class="extention"></div>
+          </div>
+        </div>
+      </div>
+      <form action="">
+        <fieldset class="slide default-slide">
+          <legend>Personal Information</legend>
+          <div class="form-field adjust">
+            <label for="name">name</label>
+            <input type="text" name="name" id="name" class="field">
+          </div>
+          <div class="form-field adjust">
+            <label for="email">Email Address</label>
+            <input type="email" name="email" id="email" class="field">
+          </div>
+          <div class="form-field adjust">
+            <label for="mobile">Mobile No.</label>
+            <input type="tel" name="mobile" id="mobile" class="field">
+          </div>
+          <div class="form-field adjust">
+            <label for="nationality">nationality</label>
+            <select name="nationality" id="nationality" class="field">
+              <option value="">
+                Select your nationality
+              </option>
+              <option value="UAE">
+                UAE National
+              </option>
+              <option value="expatriate">
+                Expatriate
+              </option>
+
+            </select>
+          </div>
+          <div class="form-field adjust">
+            <label for="occupation">occupation</label>
+            <input type="text" name="occupation" id="occupation">
+          </div>
+          <div class="form-field adjust">
+            <label for="DoB">Date of birth</label>
+            <input type="text" name="DoB" id="DoB">
+          </div>
+          <div class="buttons-1">
+            <button class="next next-1">next</button>
+          </div>
+        </fieldset>
+
+        <fieldset class="slide">
+          <legend>Property Information</legend>
+
+          <div class="radio-field">
+            <p>Is this the first or second time of buying a propertity with us?
+            </p>
+            <div>
+              <input type="radio" name="property-times" value='first' id="first">
+              <label for="first">First</label>
+              <input type="radio" name="property-times" value="second" id="second"> <label for="second">second</label>
+            </div>
+          </div>
+
+          <div class="form-field adjust">
+            <label for="nationality"> propertity name</label>
+            <select name="propertity-name" id="propertity-name" class="field">
+              <option value="">
+                select propertity name
+              </option>
+              <option value="Jalm Jumeirah">
+                Jalm Jumeirah
+              </option>
+              <option value="JLT">
+                JLT
+              </option>
+              <option value="JVC">
+                JVC
+              </option>
+              <option value="Downtown">
+                Downtown
+              </option>
+              <option value="Reef">
+                Reef
+              </option>
+              <option value="Reem">
+                Reem
+              </option>
+              <option value="Raha">
+                Raha
+              </option>
+              <option value="Yas Island">
+                Yas Island
+              </option>
+            </select>
+          </div>
+
+          <div class="radio-field">
+            <p>What property type are you interested in?
+            </p>
+            <div>
+              <input type="radio" name="property-type" value='villa' id="villa">
+              <label for="villa">villa</label>
+              <input type="radio" name="property-type" value="appartment" id="appartment"> <label
+                for="appartment">appartment</label>
+            </div>
+          </div>
+          <div class="form-field adjust">
+            <label for="property-location"> Looking for property in which emirates</label>
+            <select name="propertity-name" id="propertity-name" class="field">
+              <option value="">
+                ---select propertity location---
+              </option>
+              <option value="Dubai">
+                Dubai
+              </option>
+              <option value="Abu Dhabi">
+                Abu Dhabi
+              </option>
+              <option value="Ras Al Khaimah">
+                Ras Al Khaimah
+              </option>
+              <option value="Sharjah">
+                Sharjah
+              </option>
+              <option value="Ajman">
+                Ajman
+              </option>
+              <option value="Al Ain">
+                Al Ain
+              </option>
+              <option value="Fujairah">
+                Fujairah
+              </option>
+              <option value="YUmm Al Quwain">
+                Umm Al Quwain
+              </option>
+            </select>
+          </div>
+
+          <div class="buttons">
+            <button class="prev prev-2">previous</button>
+            <button class="next next-2">next</button>
+          </div>
+        </fieldset>
+        <fieldset class="slide form-3">
+          <legend>step 3</legend>
+          <div class="form-field adjust">
+            <label for="property-value">Property Value (in AED)</label>
+            <input type="number" name="property-value" id="property-value" class="field">
+          </div>
+          <div class="form-field adjust">
+            <label for="finance-required">Finance required (in AED)</label>
+            <input type="number" name="finance-required" id="finance-required" class="field">
+          </div>
+          <div class="form-field active">
+            <p class="">Cash in hand (i.e calculate and tell cash needed) is <span>$13232424</span></p>
+          </div>
+          <div class="radio-field">
+            <p>Looking for extra finance? (Only available in Dubai properties as of now)
+            </p>
+            <div>
+              <input type="radio" name="extra-finance" value='yes' id="extra-finance-yes">
+              <label for="extra-finance-yes">Yes</label>
+              <input type="radio" name="extra-finance" value="no" id="extra-finance-no"> <label
+                for="extra-finance-no">No</label>
+            </div>
+          </div>
+          <div class="form-field adjust">
+            <label for="company-name">company name</label>
+            <input type="text" name="company-name" id="company-name" class="field">
+          </div>
+          <div class="buttons buttons-3">
+            <button class="prev prev-3">previous</button>
+            <button class="next next-3">Next</button>
+          </div>
+        </fieldset>
+        <fieldset class="slide form-4">
+          <legend>step 4</legend>
+          <div class="radio-field radio-field-2">
+            <p>What is your work status, salaried or self employed?
+            </p>
+            <div>
+              <input type="radio" name="work-status" value='salaried' id="salaried">
+              <label for="salaried">salaried</label>
+              <input type="radio" name="work-status" value="self employed" id="self-employed"> <label
+                for="self-employed">self employed</label>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="date-of-start"> What is date of joining your company if salaried or date of starting your
+              business if self employed</label>
+            <input type="date" name="date-of-start" id="date-of-start" class="field w-5">
+          </div>
+          <div class="radio-field">
+            <p>Your employment is confirmed or under probation?
+            </p>
+            <div>
+              <input type="radio" name="employment-status" value='confirmed' id="confirmed">
+              <label for="confirmed">confirmed</label>
+              <input type="radio" name="employment-status" value="probation" id="probation"> <label
+                for="probation">under probation</label>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="monthly-income">Salary as per salary certificate or Business Profit approximately in a
+              month</label>
+            <input type="number" name="monthly-income" id="monthly-income" class="field w-5">
+          </div>
+          <div class="buttons buttons-3">
+            <button class="prev prev-3">previous</button>
+            <button class="next next-3">Next</button>
+          </div>
+        </fieldset>
+        <fieldset class="slide form-5">
+          <legend>Form 5</legend>
+          <div class="form-field">
+            <p>Rental income from property in UAE</p>
+            <div class="rental-fields">
+              <div class="rental-field">
+                <label>Property <span id="property-number">1</span></label>
+                <input type="number" name="rental-income" class="field rental-income">
+              </div>
+            </div>
+            <p class="total">Total rental income is: <span id="total-rental-income">55779</span></p>
+            <div class="add-btn-cont">
+              <button class="add-new"><span class="plus">+</span> add more</button>
+            </div>
+          </div>
+          <div class="form-field">
+            <p>Existing Personal loan information, if any</p>
+            <div class="rental-fields">
+              <div class="rental-field">
+                <label>Bank Name</label>
+                <input type="text" name="bank-name" class="field">
+              </div>
+              <div class="rental-field">
+                <label>Loan Outstanding</label>
+                <input type="number" name="loan-outstanding" class="field">
+              </div>
+              <div class="rental-field">
+                <label>Monthly installment</label>
+                <input type="number" name="monthly-installment" class="field">
+              </div>
+            </div>
+            <div class="">
+              <button class="add-new"><span class="plus">+</span> add more</button>
+            </div>
+          </div>
+          <div class="form-field">
+            <p>Existing Home loan information, if any</p>
+            <div class="rental-fields">
+              <div>
+                <label>Bank Name</label>
+                <input type="text" name="bank-name" class="field">
+              </div>
+              <div>
+                <label>Loan Outstanding</label>
+                <input type="number" name="loan-outstanding" class="field">
+              </div>
+              <div>
+                <label>Monthly installment</label>
+                <input type="number" name="monthly-installment" class="field">
+              </div>
+            </div>
+            <div>
+              <button class="add-new"><span class="plus">+</span> add more</button>
+            </div>
+          </div>
+          <div class="form-field">
+            <p>Existing Credit Card Relation, please provide credit card details of all the banks in UAE</p>
+            <div class="rental-fields">
+              <div>
+                <label>Bank Name</label>
+                <input type="text" name="bank-name" class="field">
+              </div>
+              <div>
+                <label>Card Limit</label>
+                <input type="number" name="loan-outstanding" class="field">
+              </div>
+            </div>
+            <div>
+              <button class="add-new"><span class="plus">+</span> add more</button>
+            </div>
+          </div>
+          <div class="form-field">
+            <p>Existing Auto loan information, if any</p>
+            <div class="rental-fields">
+              <div>
+                <label>Bank Name</label>
+                <input type="text" name="bank-name" class="field">
+              </div>
+              <div>
+                <label>Card Limit</label>
+                <input type="number" name="loan-outstanding" class="field">
+              </div>
+              <div>
+                <label>Monthly installment</label>
+                <input type="number" name="monthly-installment" class="field">
+              </div>
+            </div>
+            <div>
+              <button class="add-new"><span class="plus">+</span> add more</button>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="buttons buttons-4">
+            <button class="prev prev-4">previous</button>
+            <button class="next next-4">Next</button>
+          </div>
+        </fieldset>
+        <div class="slide">
+          <h3>Preview Form Please</h3>
+
+          <div class="buttons >
+          <div class=" buttons buttons-5">
+            <button class="prev prev-5">Back and Edit</button>
+            <button class="next next-5">Confirm Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </div>
+  <script src="./app.js"></script>
+</body>
+
+</html>
