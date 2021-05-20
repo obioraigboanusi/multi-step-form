@@ -56,7 +56,6 @@ button:active {
 .progress-step .step {
   display: flex;
   flex-direction: column;
-  width: 20%;
 }
 
 .progress-step .step>p {
@@ -113,6 +112,7 @@ button:active {
 .progress-step .step .bar .extention {
   height: 4px;
   width: 100%;
+  min-width: 5vw;
   margin: auto;
   background-color: black;
 }
@@ -194,10 +194,14 @@ form label {
 input, select {
   padding: .5rem 1rem;
   border: none;
+  font-size: 1rem;
   border: 1px solid lightgray;
   background-color: transparent;
 }
-
+.form-5 label, .form-1 label{
+  display: flex;
+  align-items: flex-end;
+}
 select {
   min-width: 250px;
 }
