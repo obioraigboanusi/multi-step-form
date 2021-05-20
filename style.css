@@ -133,19 +133,33 @@ button:active {
 
 form {
   margin-top: 2rem;
-  width: 600%;
   display: flex;
+}
+
+.slide-mode {
+  width: 500%;
+  flex-direction: row;
   overflow-x: hidden;
+}
+
+.preview-mode {
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .slide {
   display: block;
+  padding: 5px;
   border: none;
   display: grid;
-  width: 16.666666666666664%;
+  width: 20%;
   overflow-x: hidden;
   align-self: flex-start;
   transition: margin-left .5s ease-in;
+}
+
+.preview-mode .slide {
+  width: 100%;
 }
 
 button {
@@ -198,10 +212,12 @@ input, select {
   border: 1px solid lightgray;
   background-color: transparent;
 }
-.form-5 label, .form-1 label{
+
+.form-5 label, .form-1 label {
   display: flex;
   align-items: flex-end;
 }
+
 select {
   min-width: 250px;
 }
@@ -306,6 +322,22 @@ input {
   margin-bottom: 5px;
 }
 
+.slide-mode .confirm-submit, .slide-mode .return-to-edith {
+  display: none;
+}
+
+.preview-mode .confirm-submit, .preview-mode .return-to-edith {
+  display: block;
+}
+
+.preview-mode .prev-5, .preview-mode .submit, .preview-mode button.add-new, .preview-mode button.prev, .preview-mode button.next, .preview-mode fieldset legend {
+  display: none;
+}
+.preview-mode fieldset input,.preview-mode fieldset .form-field select, input[type=radio] {
+  pointer-events: none !important;
+}
+
+
 @media screen and (min-width: 800px) {
   .form-field.adjust {
     display: grid;
@@ -318,7 +350,6 @@ input {
   select {
     min-width: 100px;
   }
-
   .form-5 .rental-fields>div {
     display: grid;
     grid-template-columns: 30% 50%;
