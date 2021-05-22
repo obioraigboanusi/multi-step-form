@@ -5,7 +5,9 @@ window.addEventListener("DOMContentLoaded", () => {
   const nextBtns = document.getElementsByClassName("next");
   const prevBtns = document.getElementsByClassName("prev");
   const progressBars = document.getElementsByClassName("step");
- 
+  const slides = document.querySelectorAll(".slide");
+  // console.log(slides)
+
   const radioElements = document.querySelectorAll("input[type=radio]");
 
   const confirmSubmitBtn = document.getElementById("confirm-submit");
@@ -19,7 +21,7 @@ window.addEventListener("DOMContentLoaded", () => {
       if (i === nextBtns.length - 1) {
         e.preventDefault();
 
-       // preview form at the end of the slide
+        // preview form at the end of the slide
         progressForward();
         previewForm();
       } else {
@@ -30,7 +32,7 @@ window.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-// handle previous button click
+  // handle previous button click
   for (let i = 0; i <= prevBtns.length - 1; i++) {
     prevBtns[i].addEventListener("click", (e) => {
       e.preventDefault();
@@ -43,25 +45,32 @@ window.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
     location.replace("submit.html");
   });
+
   returnToEdithBtn.addEventListener("click", (e) => {
     e.preventDefault();
     progressBackward();
     returnToEdithForm();
   });
+
   function slideForward(slideIndex) {
-    defaultSlide.style.marginLeft = calcMarginLeftForward(slideIndex);
+    slides.forEach((slide, index) => {
+      if (index === slideIndex + 1) {
+        slide.style.display = "block";
+      } else {
+        slide.style.display = "none";
+      }
+    });
   }
-  function slideBackward(slideIndex) {
-    defaultSlide.style.marginLeft = calcMarginLeftBack(slideIndex);
+  function slideBackward(btnIndex) {
+    slides.forEach((slide, index) => {
+      if (index === btnIndex) {
+        slide.style.display = "block";
+      } else {
+        slide.style.display = "none";
+      }
+    });
   }
 
-  function calcMarginLeftForward(slideIndex) {
-    let num = slideIndex + 1;
-    return `-${20 * num}%`;
-  }
-  function calcMarginLeftBack(slideIndex) {
-    return `-${20 * slideIndex}%`;
-  }
   function progressForward() {
     progressBars[currentSlide - 1].classList.add("active");
     currentSlide += 1;
@@ -73,20 +82,33 @@ window.addEventListener("DOMContentLoaded", () => {
   function previewForm() {
     form.classList.remove("slide-mode");
     form.classList.add("preview-mode");
-    defaultSlide.style.marginLeft = "0%";
 
-//disable radio buttons
+    //display all slides
+    slides.forEach((slide) => {
+        slide.style.display = "block";
+    });
+  
+
+    //disable radio buttons
     for (let i = 0; i < radioElements.length; i++) {
       radioElements[i].setAttribute("disabled", "true");
     }
   }
-
+  
   function returnToEdithForm() {
     form.classList.add("slide-mode");
     form.classList.remove("preview-mode");
-    defaultSlide.style.marginLeft = "-80%";
 
-//enable radio buttons
+    slides.forEach((slide, index) => {
+      if (index === currentSlide-1) {
+        slide.style.display = "block";
+      } else {
+        slide.style.display = "none";
+      }
+    });
+  
+
+    //enable radio buttons
     for (let i = 0; i < radioElements.length; i++) {
       radioElements[i].setAttribute("disabled", "false");
     }

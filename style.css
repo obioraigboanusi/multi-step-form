@@ -17,6 +17,9 @@ body {
 }
 
 h2 {
+  font-size: calc(1.325rem + .9vw);
+  margin-bottom: .5rem;
+  line-height: 1.2;
   color: dodgerblue;
   font-weight: bolder;
 }
@@ -33,12 +36,11 @@ button:active {
 .container {
   background-color: #fff;
   width: 90%;
-  margin: auto;
   max-width: 700px;
+  margin:3rem auto;
 }
 
 .container .inner {
-  width: 80%;
   margin: auto;
   text-align: center;
   padding: 2rem 0;
@@ -54,14 +56,17 @@ button:active {
 }
 
 .progress-step .step {
+  width: 25%;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
+  position: relative;
+  align-items: center;
 }
 
 .progress-step .step>p {
-  margin-bottom: 1rem;
-  transform: translateX(-40%);
-  font-weight: bolder;
+  font-size: .8rem;
+  max-width: 1rem auto 0;
+  font-weight: bold;
 }
 
 .progress-step .step.active p {
@@ -70,20 +75,25 @@ button:active {
 
 .bar {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
 }
 
 .progress-step .bar .circle {
-  position: relative;
-  height: 25px;
-  min-width: 25px;
-  border-radius: 50%;
   display: flex;
   align-items: center;
-  background-color: transparent;
   justify-content: center;
-  border: 2px solid black;
-  color: black;
+  position: relative;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: lightgray;
+  color: white;
+  padding: 2px;
 }
 
 .progress-step .step.active .circle {
@@ -93,8 +103,7 @@ button:active {
 }
 
 .progress-step .circle>span {
-  position: absolute;
-  font-size: .8rem;
+ z-index: 1;
 }
 
 .progress-step .step.active .circle>span.step-num {
@@ -112,54 +121,40 @@ button:active {
 .progress-step .step .bar .extention {
   height: 4px;
   width: 100%;
-  min-width: 5vw;
   margin: auto;
-  background-color: black;
+  position: absolute;
+  background-color: lightgray;
 }
 
 .progress-step .step.active .extention {
   background-color: dodgerblue;
 }
 
-.progress-step .step:last-of-type .extention {
-  display: none;
-}
-
-.progress-step .step:last-of-type {
-  margin-right: -2rem;
-}
 
 /* form styles */
 
 form {
   margin-top: 2rem;
-  display: flex;
+  width: 100%;
 }
 
-.slide-mode {
-  width: 500%;
-  flex-direction: row;
-  overflow-x: hidden;
-}
-
-.preview-mode {
-  flex-direction: column;
-  align-items: flex-start;
+from.preview-mode>fieldset {
+  display: block !important;
 }
 
 .slide {
   display: block;
-  padding: 5px;
   border: none;
-  display: grid;
-  width: 20%;
-  overflow-x: hidden;
+  width: 100%;
   align-self: flex-start;
-  transition: margin-left .5s ease-in;
 }
 
 .preview-mode .slide {
   width: 100%;
+}
+
+.slide-mode .slide:not(:first-of-type) {
+  display: none;
 }
 
 button {
@@ -175,21 +170,34 @@ button {
 }
 
 .next:hover, .prev:hover {
+  outline: 2px solid rgb(2, 111, 221);
+  outline-offset: 2px;
   background-color: rgb(2, 111, 221);
-}
-
-.buttons-1 {
-  text-align: right;
 }
 
 div.buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 2rem;
 }
 
-.next-1 {
-  margin-left: auto;
+.buttons-1 {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.buttons-1 button {
+  margin-bottom: 0;
+  margin-right: 2rem;
+}
+.prev:hover, return-to-edith:hover{
+  background-color: black;
+  outline: 2px solid black;
+  outline-offset: 2px;
+}
+.prev, return-to-edith{
+  background-color: grey;
 }
 
 .slide h3, legend {
@@ -213,7 +221,7 @@ input, select {
   background-color: transparent;
 }
 
-.form-5 label, .form-1 label {
+.form-4 label, .form-1 label {
   display: flex;
   align-items: flex-end;
 }
@@ -241,7 +249,7 @@ label {
 }
 
 .radio-field, .form-field {
-  margin-bottom: 1rem;
+  margin-bottom: .8rem;
 }
 
 .radio-field p {
@@ -274,69 +282,73 @@ input {
   margin-top: 5px;
 }
 
-.form-4 input.w-5 {
+.form-3 input.w-5 {
   max-width: 300px;
   display: block;
 }
 
-.form-5 .rental-fields>div {
+.form-4 .rental-fields>div {
   display: grid;
   grid-template-columns: 50% 50%;
   margin-bottom: .5rem;
 }
 
-.form-5 .rental-fields>div {
+.form-4 .rental-fields>div {
   display: flex;
   align-items: flex-end !important;
   font-size: 1rem;
 }
 
-.form-5 .form-field>div:nth-of-type(2) {
+.form-4 .form-field>div:nth-of-type(2) {
   display: flex;
   justify-content: flex-end;
   margin-top: .5rem;
 }
 
-.form-5 .form-field>div:nth-of-type(2) button {
+.form-4 .form-field>div:nth-of-type(2) button, .form-3 .add-new {
+  
   font-size: .8rem;
   background-color: #fff;
   color: dodgerblue;
   border: 1px solid dodgerblue;
   font-weight: bold;
 }
+.form-3 .add-new{
+  margin-top: .5rem;
+}
 
-.form-5 .form-field>div:nth-of-type(2) button:hover {
+.form-4 .form-field>div:nth-of-type(2) button:hover {
   background-color: rgb(239, 246, 255);
 }
 
-.form-5 .form-field .total span {
+.form-4 .form-field .total span {
   font-weight: bolder;
 }
 
-.form-5 .form-field p.total {
+.form-4 .form-field p.total {
   font-weight: normal;
 }
 
-.form-5 .form-field>p {
+.form-4 .form-field>p {
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-.slide-mode .confirm-submit, .slide-mode .return-to-edith {
+.slide-mode .confirm-submit, .slide-mode .return-to-edith, .slide-mode .preview-heading {
   display: none;
 }
 
-.preview-mode .confirm-submit, .preview-mode .return-to-edith {
+.preview-mode .confirm-submit, .preview-mode .return-to-edith, .preview-mode .preview-heading {
   display: block;
 }
 
 .preview-mode .prev-5, .preview-mode .submit, .preview-mode button.add-new, .preview-mode button.prev, .preview-mode button.next, .preview-mode fieldset legend {
   display: none;
 }
-.preview-mode fieldset input,.preview-mode fieldset .form-field select, input[type=radio] {
+
+.preview-mode fieldset input, .preview-mode fieldset .form-field select, input[type=radio] {
   pointer-events: none !important;
 }
-
 
 @media screen and (min-width: 800px) {
   .form-field.adjust {
@@ -350,8 +362,14 @@ input {
   select {
     min-width: 100px;
   }
-  .form-5 .rental-fields>div {
+  .form-4 .rental-fields>div {
     display: grid;
     grid-template-columns: 30% 50%;
   }
+}
+.slide-card{
+  padding: 1.5rem 2rem;
+  margin: 0 3% 20px 3%;
+  width: 94%;
+  box-shadow: 0 2px 2px 2px rgb(0 0 0 / 20%);
 }
