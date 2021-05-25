@@ -263,18 +263,16 @@
                 month</label>
               <input type="number" name="monthly-income" id="monthly-income" class="field w-5">
             </div>
+
             <div class="form-field">
-              <p>Rental income from property in UAE</p>
-              <div class="rental-fields">
-                <div class="rental-field">
-                  <label>Property <span id="property-number">1</span></label>
-                  <input type="number" name="rental-income" class="field rental-income">
-                </div>
+              <label for="rental-income">Rental income from property in UAE</label>
+              <ul id="rental-income-entries" class="rental-income-entries list"></ul>
+              <div class="rental-field">
+                <input type="number" name="rental-income" class="field rental-income" id="rental-income"
+                  placeholder="enter your rental income">
+                <button class="add-new rental-income-add">+ add</button>
               </div>
-              <p class="total">Total rental income is: <span id="total-rental-income">55779</span></p>
-              <div class="add-btn-cont">
-                <button class="add-new"><span class="plus">+</span> add more</button>
-              </div>
+              <p class="total">Total rental income is: <span id="total-rental-income"></span></p>
             </div>
           </div>
           <div class="buttons buttons-3">
@@ -285,80 +283,88 @@
         <fieldset class="slide form-4">
           <div class="slide-card">
             <legend>Loan Information</legend>
-            <div class="form-field">
+            <div class="form-field personal-loan">
               <p>Existing Personal loan information, if any</p>
+
+              <ol class="personal-loan-entries">
+              </ol>
               <div class="rental-fields">
                 <div class="rental-field">
                   <label>Bank Name</label>
-                  <input type="text" name="bank-name" class="field">
+                  <input type="text" name="bank-name" class="field bank-name">
                 </div>
                 <div class="rental-field">
                   <label>Loan Outstanding</label>
-                  <input type="number" name="loan-outstanding" class="field">
+                  <input type="number" name="loan-outstanding" class="field loan-outstanding">
                 </div>
                 <div class="rental-field">
                   <label>Monthly installment</label>
-                  <input type="number" name="monthly-installment" class="field">
+                  <input type="number" name="monthly-installment" class="field monthly-installment">
                 </div>
+
               </div>
               <div class="">
-                <button class="add-new"><span class="plus">+</span> add more</button>
+                <button class="add-new">+add</button>
               </div>
+
             </div>
-            <div class="form-field">
+            <div class="form-field home-loan">
               <p>Existing Home loan information, if any</p>
+              <ol class="home-loan-display"></ol>
               <div class="rental-fields">
                 <div>
                   <label>Bank Name</label>
-                  <input type="text" name="bank-name" class="field">
+                  <input type="text" name="bank-name" class="field bank-name">
                 </div>
                 <div>
                   <label>Loan Outstanding</label>
-                  <input type="number" name="loan-outstanding" class="field">
+                  <input type="number" name="loan-outstanding" class="field loan-outstanding">
                 </div>
                 <div>
                   <label>Monthly installment</label>
-                  <input type="number" name="monthly-installment" class="field">
+                  <input type="number" name="monthly-installment" class="field monthly-installment">
                 </div>
               </div>
               <div>
-                <button class="add-new"><span class="plus">+</span> add more</button>
+                <button class="add-new"><span class="plus">+</span> add</button>
               </div>
             </div>
-            <div class="form-field">
+            <div class="form-field credit-card">
               <p>Existing Credit Card Relation, please provide credit card details of all the banks in UAE</p>
+              <ol class="credit-card-display"></ol>
               <div class="rental-fields">
                 <div>
                   <label>Bank Name</label>
-                  <input type="text" name="bank-name" class="field">
+                  <input type="text" name="bank-name" class="field bank-name">
                 </div>
                 <div>
                   <label>Card Limit</label>
-                  <input type="number" name="loan-outstanding" class="field">
+                  <input type="number" name="loan-outstanding" class="field card-limit">
                 </div>
               </div>
               <div>
-                <button class="add-new"><span class="plus">+</span> add more</button>
+                <button class="add-new">+ add</button>
               </div>
             </div>
-            <div class="form-field">
+            <div class="form-field auto-loan">
               <p>Existing Auto loan information, if any</p>
+              <ol class="auto-loan-display"></ol>
               <div class="rental-fields">
                 <div>
                   <label>Bank Name</label>
-                  <input type="text" name="bank-name" class="field">
+                  <input type="text" name="bank-name" class="field bank-name">
                 </div>
                 <div>
                   <label>Card Limit</label>
-                  <input type="number" name="loan-outstanding" class="field">
+                  <input type="number" name="loan-outstanding" class="field loan-outstanding">
                 </div>
                 <div>
                   <label>Monthly installment</label>
-                  <input type="number" name="monthly-installment" class="field">
+                  <input type="number" name="monthly-installment" class="field monthly-installment">
                 </div>
               </div>
               <div>
-                <button class="add-new"><span class="plus">+</span> add more</button>
+                <button class="add-new">+ add</button>
               </div>
             </div>
           </div>

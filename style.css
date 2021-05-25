@@ -17,7 +17,7 @@ body {
 }
 
 h2 {
-  font-size: calc(1.325rem + .9vw);
+  font-size: 2rem;
   margin-bottom: .5rem;
   line-height: 1.2;
   color: dodgerblue;
@@ -35,9 +35,9 @@ button:active {
 
 .container {
   background-color: #fff;
-  width: 90%;
+  width: 96%;
   max-width: 700px;
-  margin:3rem auto;
+  margin: 3rem auto;
 }
 
 .container .inner {
@@ -46,7 +46,9 @@ button:active {
   padding: 2rem 0;
   overflow-x: hidden;
 }
-
+header{
+  padding: 0 1rem;
+}
 .progress-step {
   display: flex;
   justify-content: center;
@@ -65,7 +67,7 @@ button:active {
 
 .progress-step .step>p {
   font-size: .8rem;
-  max-width: 1rem auto 0;
+  margin: 1rem auto 0;
   font-weight: bold;
 }
 
@@ -91,7 +93,7 @@ button:active {
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  background-color: lightgray;
+  background-color:lightgray;
   color: white;
   padding: 2px;
 }
@@ -103,7 +105,7 @@ button:active {
 }
 
 .progress-step .circle>span {
- z-index: 1;
+  z-index: 1;
 }
 
 .progress-step .step.active .circle>span.step-num {
@@ -129,7 +131,6 @@ button:active {
 .progress-step .step.active .extention {
   background-color: dodgerblue;
 }
-
 
 /* form styles */
 
@@ -191,12 +192,14 @@ div.buttons {
   margin-bottom: 0;
   margin-right: 2rem;
 }
-.prev:hover, return-to-edith:hover{
+
+.prev:hover, return-to-edith:hover {
   background-color: black;
   outline: 2px solid black;
   outline-offset: 2px;
 }
-.prev, return-to-edith{
+
+.prev, return-to-edith {
   background-color: grey;
 }
 
@@ -306,14 +309,14 @@ input {
 }
 
 .form-4 .form-field>div:nth-of-type(2) button, .form-3 .add-new {
-  
   font-size: .8rem;
   background-color: #fff;
   color: dodgerblue;
   border: 1px solid dodgerblue;
   font-weight: bold;
 }
-.form-3 .add-new{
+
+.form-3 .add-new {
   margin-top: .5rem;
 }
 
@@ -349,6 +352,31 @@ input {
 .preview-mode fieldset input, .preview-mode fieldset .form-field select, input[type=radio] {
   pointer-events: none !important;
 }
+.slide-card {
+  padding: 1.5rem 2rem;
+  margin: 0 3% 20px 3%;
+  width: 94%;
+  box-shadow: 0 2px 2px 2px rgb(0 0 0 / 20%);
+}
+
+.form-field ol, .list{
+  margin-left: 1rem !important;
+  font-size: 14px !important;
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-field ol{
+  list-style: none;
+}
+.form-field ol>li{
+  margin: 5px;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: rgb(249, 252, 255);
+}
+.form-field ol>li>ul{
+  margin-left: 1rem;
+}
 
 @media screen and (min-width: 800px) {
   .form-field.adjust {
@@ -366,10 +394,4 @@ input {
     display: grid;
     grid-template-columns: 30% 50%;
   }
-}
-.slide-card{
-  padding: 1.5rem 2rem;
-  margin: 0 3% 20px 3%;
-  width: 94%;
-  box-shadow: 0 2px 2px 2px rgb(0 0 0 / 20%);
 }
