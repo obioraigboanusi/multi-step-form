@@ -155,14 +155,8 @@ from.preview-mode>fieldset {
 }
 
 .slide {
-  display: block;
   border: none;
-  width: 100%;
   align-self: flex-start;
-}
-
-.preview-mode .slide {
-  width: 100%;
 }
 
 .slide-mode .slide:not(:first-of-type) {
@@ -220,11 +214,10 @@ form label {
   border: none;
   border-bottom: 1px solid #ccc;
   margin-top: 2px;
-  width: 100%;
-  font-family: montserrat;
+  width: 100% !important;
   color: #2c3e50;
   letter-spacing: 1px;
-  display: block;
+  display: block !important;
 }
 
 .form-field input:not(input[type='radio']):focus, select:focus {
@@ -242,8 +235,7 @@ option {
 }
 
 label {
-  height: 100%;
-  width: 100%;
+  width: 100% !important;
 }
 
 .form-field label, .form-field p, .radio-field p, .radio-field label {
@@ -275,7 +267,7 @@ input[type='radio'] {
 
 .form-field {
   text-align: left;
-  width: 100%;
+  width: 100% !important;
 }
 
 .form-4 .form-field>div:nth-of-type(2) {
