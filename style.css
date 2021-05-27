@@ -222,9 +222,8 @@ form label {
   margin-top: 2px;
   width: 100%;
   font-family: montserrat;
-  color: #2C3E50;
+  color: #2c3e50;
   letter-spacing: 1px;
-  width: 100%;
   display: block;
 }
 
@@ -276,6 +275,7 @@ input[type='radio'] {
 
 .form-field {
   text-align: left;
+  width: 100%;
 }
 
 .form-4 .form-field>div:nth-of-type(2) {
@@ -295,6 +295,7 @@ input[type='radio'] {
 .form-3 .add-new {
   margin-top: .5rem;
 }
+
 .form-3 .add-new:first-of-type {
   margin-bottom: .5rem;
 }
