@@ -9,6 +9,7 @@ window.addEventListener("DOMContentLoaded", () => {
   // console.log(slides)
 
   const radioElements = document.querySelectorAll("input[type=radio]");
+  const labelElements = document.querySelectorAll("label");
   const confirmSubmitBtn = document.getElementById("confirm-submit");
   const returnToEdithBtn = document.getElementById("return-to-edit");
 
@@ -83,7 +84,7 @@ window.addEventListener("DOMContentLoaded", () => {
   function previewForm() {
     form.classList.remove("slide-mode");
     form.classList.add("preview-mode");
-
+    
     //display all slides
     slides.forEach((slide) => {
       slide.style.display = "block";
@@ -92,6 +93,11 @@ window.addEventListener("DOMContentLoaded", () => {
     //disable radio buttons
     for (let i = 0; i < radioElements.length; i++) {
       radioElements[i].setAttribute("disabled", "true");
+    }
+
+    // disable label elements
+    for (let i = 0; i < labelElements.length; i++) {
+     labelElements[i].setAttribute('for', `${labelElements[i].getAttribute('for') + '1' }`)
     }
   }
 
@@ -110,6 +116,10 @@ window.addEventListener("DOMContentLoaded", () => {
     //enable radio buttons
     for (let i = 0; i < radioElements.length; i++) {
       radioElements[i].setAttribute("disabled", "false");
+    }
+    //enable label buttons
+    for (let i = 0; i < labelElements.length; i++) {
+      labelElements[i].setAttribute('for', `${labelElements[i].getAttribute('for').slice(0,-1) }`)
     }
   }
 // rental income add

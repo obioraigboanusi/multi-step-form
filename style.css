@@ -218,11 +218,6 @@ form label {
   text-align: left;
 }
 
-.form-4 label, .form-1 label {
-  display: flex;
-  align-items: flex-end;
-}
-
 .form-field input:not(input[type='radio']), select {
   padding: .1rem .5rem .3rem .5rem;
   border: none;
@@ -284,9 +279,6 @@ input[type='radio'] {
 
 .form-field {
   text-align: left;
-}
-.form-4 .rental-fields>div {
-  margin-bottom: .5rem;
 }
 
 .form-4 .form-field>div:nth-of-type(2) {
@@ -358,7 +350,7 @@ input[type='radio'] {
   list-style: none;
 }
 
-.form-field ol>li, .list>li{
+.form-field ol>li, .list>li {
   margin: 5px;
   padding: .5rem;
   border-radius: 5px;
