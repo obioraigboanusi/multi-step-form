@@ -27,6 +27,15 @@ h2 {
 button {
   cursor: pointer;
   transition: transform .05s ease-in;
+  padding: .5rem 1rem;
+  min-width: 100px;
+  text-transform: capitalize;
+  background-color: #006fb8;
+  border: none;
+  align-self: center;
+  color: white;
+  font-size: 1rem;
+  /* margin-bottom: 1rem; */
 }
 
 button:active {
@@ -160,18 +169,6 @@ from.preview-mode>fieldset {
   display: none;
 }
 
-button {
-  padding: .5rem 1rem;
-  min-width: 100px;
-  text-transform: capitalize;
-  background-color: #006fb8;
-  border: none;
-  align-self: center;
-  color: white;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
 .next:hover, .prev:hover {
   outline: 2px solid rgb(2, 111, 221);
   outline-offset: 2px;
@@ -297,6 +294,9 @@ input[type='radio'] {
 
 .form-3 .add-new {
   margin-top: .5rem;
+}
+.form-3 .add-new:first-of-type {
+  margin-bottom: .5rem;
 }
 
 .form-4 .form-field>div:nth-of-type(2) button:hover {
