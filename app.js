@@ -9,9 +9,8 @@ window.addEventListener("DOMContentLoaded", () => {
   // console.log(slides)
 
   const radioElements = document.querySelectorAll("input[type=radio]");
-
   const confirmSubmitBtn = document.getElementById("confirm-submit");
-  const returnToEdithBtn = document.getElementById("return-to-edith");
+  const returnToEdithBtn = document.getElementById("return-to-edit");
 
   let currentSlide = 1;
 
@@ -75,10 +74,12 @@ window.addEventListener("DOMContentLoaded", () => {
     progressBars[currentSlide - 1].classList.add("active");
     currentSlide += 1;
   }
+
   function progressBackward() {
     progressBars[currentSlide - 2].classList.remove("active");
     currentSlide -= 1;
   }
+  
   function previewForm() {
     form.classList.remove("slide-mode");
     form.classList.add("preview-mode");
@@ -245,19 +246,19 @@ window.addEventListener("DOMContentLoaded", () => {
         bank: autoLoanBank.value,
         outstanding: autoLoanOutstanding.value, installment: autoLoanInstallment.value
       })
-      autoLoanEntries.insertAdjacentHTML('beforeend', AddTemplate(autoLoanBank.value, autoLoanOutstanding.value, autoLoanInstallment.value))
+      autoLoanEntries.insertAdjacentHTML('beforeend', AddTemplate(autoLoanBank.value, autoLoanOutstanding.value, autoLoanInstallment.value, 'cardlimit'))
       autoLoanBank.value = '';
       autoLoanOutstanding.value='';
       autoLoanInstallment.value=''
     }
   })
 
-  function AddTemplate(bank, outstanding, installment) {
+  function AddTemplate(bank, outstanding, installment,cardlimit) {
     return (`
       <li>${bank}
         <ul>
-            <li>Outstandin: ${outstanding}</li>
-            <li>installment: ${installment}</li>
+            <li> ${cardlimit? 'Card Limit': 'Outstanding'}: ${outstanding}</li>
+            <li>Installment: ${installment}</li>
         </ul>
       </li>
       `

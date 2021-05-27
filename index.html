@@ -204,9 +204,9 @@
               <label for="finance-required">Finance required (in AED)</label>
               <input type="number" name="finance-required" id="finance-required" class="field">
             </div>
-            <div class="form-field active">
-              <p class="">Cash in hand (i.e calculate and tell cash needed) is <span>$13232424</span></p>
-            </div>
+            <!-- <div class="form-field active">
+              <p class="">Cash in hand (i.e calculate and tell cash needed) is <span>_</span></p>
+            </div> -->
             <div class="radio-field">
               <p>Looking for extra finance? (Only available in Dubai properties as of now)
               </p>
@@ -290,16 +290,16 @@
               </ol>
               <div class="rental-fields">
                 <div class="rental-field">
-                  <label>Bank Name</label>
-                  <input type="text" name="bank-name" class="field bank-name">
+                  <label for="personal-loan-bank">Bank Name</label>
+                  <input type="text" name="bank-name" id="personal-loan-bank" class="field bank-name">
                 </div>
                 <div class="rental-field">
-                  <label>Loan Outstanding</label>
-                  <input type="number" name="loan-outstanding" class="field loan-outstanding">
+                  <label for="personal-loan-outstanding">Loan Outstanding</label>
+                  <input type="number" name="loan-outstanding" id="personal-loan-outstanding" class="field loan-outstanding">
                 </div>
                 <div class="rental-field">
-                  <label>Monthly installment</label>
-                  <input type="number" name="monthly-installment" class="field monthly-installment">
+                  <label for="personal-monthly-installment">Monthly installment</label>
+                  <input type="number" name="monthly-installment" id="personal-monthly-installment" class="field monthly-installment">
                 </div>
 
               </div>
@@ -313,16 +313,16 @@
               <ol class="home-loan-display"></ol>
               <div class="rental-fields">
                 <div>
-                  <label>Bank Name</label>
-                  <input type="text" name="bank-name" class="field bank-name">
+                  <label for="home-loan-bank">Bank Name</label>
+                  <input type="text" name="bank-name" id="home-loan-bank" class="field bank-name">
                 </div>
                 <div>
-                  <label>Loan Outstanding</label>
-                  <input type="number" name="loan-outstanding" class="field loan-outstanding">
+                  <label for="home-loan-outstanding">Loan Outstanding</label>
+                  <input type="number" name="loan-outstanding" id="home-loan-outstanding" class="field loan-outstanding">
                 </div>
                 <div>
-                  <label>Monthly installment</label>
-                  <input type="number" name="monthly-installment" class="field monthly-installment">
+                  <label for="home-loan-monthly-installment">Monthly installment</label>
+                  <input type="number" name="monthly-installment" id="home-loan-monthly-installment" class="field monthly-installment">
                 </div>
               </div>
               <div>
@@ -334,12 +334,12 @@
               <ol class="credit-card-display"></ol>
               <div class="rental-fields">
                 <div>
-                  <label>Bank Name</label>
-                  <input type="text" name="bank-name" class="field bank-name">
+                  <label for="credit-card-bank">Bank Name</label>
+                  <input type="text" name="bank-name" id="credit-card-bank" class="field bank-name">
                 </div>
                 <div>
-                  <label>Card Limit</label>
-                  <input type="number" name="loan-outstanding" class="field card-limit">
+                  <label for="credit-card-limit">Card Limit</label>
+                  <input type="number" name="loan-outstanding" id="credit-card-limit" class="field card-limit">
                 </div>
               </div>
               <div>
@@ -351,16 +351,16 @@
               <ol class="auto-loan-display"></ol>
               <div class="rental-fields">
                 <div>
-                  <label>Bank Name</label>
-                  <input type="text" name="bank-name" class="field bank-name">
+                  <label for="auto-loan-bank">Bank Name</label>
+                  <input type="text" name="bank-name" id="auto-loan-bank" class="field bank-name">
                 </div>
                 <div>
-                  <label>Card Limit</label>
-                  <input type="number" name="loan-outstanding" class="field loan-outstanding">
+                  <label for="auto-loan-card-limit">Card Limit</label>
+                  <input type="number" name="loan-outstanding" id="auto-loan-card-limit" class="field loan-outstanding">
                 </div>
                 <div>
-                  <label>Monthly installment</label>
-                  <input type="number" name="monthly-installment" class="field monthly-installment">
+                  <label for="auto-loan-monthly-installment">Monthly installment</label>
+                  <input type="number" name="monthly-installment" id="auto-loan-monthly-installment" class="field monthly-installment">
                 </div>
               </div>
               <div>
@@ -370,9 +370,9 @@
           </div>
           <div class="buttons buttons-5">
             <button class="prev prev-5">previous</button>
-            <button class="return-to-edith" id="return-to-edith">return to edith</button>
-            <button class="next submit" id="submit">Submit</button>
-            <button class="confirm-submit" id="confirm-submit">confirm submit</button>
+            <button class="return-to-edit" id="return-to-edit">edit</button>
+            <button class="next submit" id="submit">review</button>
+            <button class="confirm-submit" id="confirm-submit">submit</button>
           </div>
 
         </fieldset>

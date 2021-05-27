@@ -11,7 +11,7 @@ body {
   font-size: 18px;
   font-weight: 400;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  background-image: radial-gradient(dodgerblue, rgb(28, 77, 223));
+  background-image: radial-gradient(#006fb8, rgb(28, 77, 223));
   display: flex;
   align-items: center;
 }
@@ -20,7 +20,7 @@ h2 {
   font-size: 2rem;
   margin-bottom: .5rem;
   line-height: 1.2;
-  color: dodgerblue;
+  color: #006fb8;
   font-weight: bolder;
 }
 
@@ -46,9 +46,11 @@ button:active {
   padding: 2rem 0;
   overflow-x: hidden;
 }
-header{
+
+header {
   padding: 0 1rem;
 }
+
 .progress-step {
   display: flex;
   justify-content: center;
@@ -72,7 +74,7 @@ header{
 }
 
 .progress-step .step.active p {
-  color: dodgerblue;
+  color: #006fb8;
 }
 
 .bar {
@@ -93,14 +95,14 @@ header{
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  background-color:lightgray;
+  background-color: lightgray;
   color: white;
   padding: 2px;
 }
 
 .progress-step .step.active .circle {
-  background-color: dodgerblue;
-  border-color: dodgerblue;
+  background-color: #006fb8;
+  border-color: #006fb8;
   color: white;
 }
 
@@ -129,7 +131,7 @@ header{
 }
 
 .progress-step .step.active .extention {
-  background-color: dodgerblue;
+  background-color: #006fb8;
 }
 
 /* form styles */
@@ -162,7 +164,7 @@ button {
   padding: .5rem 1rem;
   min-width: 100px;
   text-transform: capitalize;
-  background-color: dodgerblue;
+  background-color: #006fb8;
   border: none;
   align-self: center;
   color: white;
@@ -193,13 +195,13 @@ div.buttons {
   margin-right: 2rem;
 }
 
-.prev:hover, return-to-edith:hover {
+.prev:hover, .return-to-edit:hover {
   background-color: black;
   outline: 2px solid black;
   outline-offset: 2px;
 }
 
-.prev, return-to-edith {
+.prev, .return-to-edit {
   background-color: grey;
 }
 
@@ -216,25 +218,32 @@ form label {
   text-align: left;
 }
 
-input, select {
-  padding: .5rem 1rem;
-  border: none;
-  font-size: 1rem;
-  border: 1px solid lightgray;
-  background-color: transparent;
-}
-
 .form-4 label, .form-1 label {
   display: flex;
   align-items: flex-end;
 }
 
-select {
-  min-width: 250px;
+.form-field input:not(input[type='radio']), select {
+  padding: .1rem .5rem .3rem .5rem;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin-top: 2px;
+  width: 100%;
+  font-family: montserrat;
+  color: #2C3E50;
+  letter-spacing: 1px;
+  width: 100%;
+  display: block;
 }
 
-input:focus, select:focus {
-  outline: 2px solid dodgerblue;
+.form-field input:not(input[type='radio']):focus, select:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: none;
+  font-weight: bold;
+  border-bottom: 2px solid #006fb8;
+  outline: 1px solid #006fb8;
 }
 
 option {
@@ -268,38 +277,16 @@ label {
   margin-right: 2rem;
 }
 
-.form-field input {
-  width: 100%;
-}
-
-.form-field {
-  text-align: left;
-}
-
 input[type='radio'] {
   margin-top: 0;
   border: 1px solid red;
 }
 
-input {
-  margin-top: 5px;
+.form-field {
+  text-align: left;
 }
-
-.form-3 input.w-5 {
-  max-width: 300px;
-  display: block;
-}
-
 .form-4 .rental-fields>div {
-  display: grid;
-  grid-template-columns: 50% 50%;
   margin-bottom: .5rem;
-}
-
-.form-4 .rental-fields>div {
-  display: flex;
-  align-items: flex-end !important;
-  font-size: 1rem;
 }
 
 .form-4 .form-field>div:nth-of-type(2) {
@@ -311,8 +298,8 @@ input {
 .form-4 .form-field>div:nth-of-type(2) button, .form-3 .add-new {
   font-size: .8rem;
   background-color: #fff;
-  color: dodgerblue;
-  border: 1px solid dodgerblue;
+  color: #006fb8;
+  border: 1px solid #006fb8;
   font-weight: bold;
 }
 
@@ -337,11 +324,11 @@ input {
   margin-bottom: 5px;
 }
 
-.slide-mode .confirm-submit, .slide-mode .return-to-edith, .slide-mode .preview-heading {
+.slide-mode .confirm-submit, .slide-mode .return-to-edit, .slide-mode .preview-heading {
   display: none;
 }
 
-.preview-mode .confirm-submit, .preview-mode .return-to-edith, .preview-mode .preview-heading {
+.preview-mode .confirm-submit, .preview-mode .return-to-edit, .preview-mode .preview-heading {
   display: block;
 }
 
@@ -352,6 +339,7 @@ input {
 .preview-mode fieldset input, .preview-mode fieldset .form-field select, input[type=radio] {
   pointer-events: none !important;
 }
+
 .slide-card {
   padding: 1.5rem 2rem;
   margin: 0 3% 20px 3%;
@@ -359,39 +347,24 @@ input {
   box-shadow: 0 2px 2px 2px rgb(0 0 0 / 20%);
 }
 
-.form-field ol, .list{
+.form-field ol, .list {
   margin-left: 1rem !important;
   font-size: 14px !important;
   display: flex;
   flex-wrap: wrap;
 }
-.form-field ol{
+
+.form-field ol, .list {
   list-style: none;
 }
-.form-field ol>li{
+
+.form-field ol>li, .list>li{
   margin: 5px;
-  padding: 1rem;
+  padding: .5rem;
   border-radius: 5px;
-  background-color: rgb(249, 252, 255);
-}
-.form-field ol>li>ul{
-  margin-left: 1rem;
+  background-color: rgb(229, 239, 250);
 }
 
-@media screen and (min-width: 800px) {
-  .form-field.adjust {
-    display: grid;
-    grid-template-columns: 30% 70%;
-    justify-content: space-between;
-  }
-  .form-3 .form-field.adjust {
-    grid-template-columns: 40% 55%;
-  }
-  select {
-    min-width: 100px;
-  }
-  .form-4 .rental-fields>div {
-    display: grid;
-    grid-template-columns: 30% 50%;
-  }
+.form-field ol>li>ul {
+  margin-left: 1rem;
 }
