@@ -216,7 +216,6 @@ form label {
   margin-top: 2px;
   width: 100% !important;
   color: #2c3e50;
-  letter-spacing: 1px;
   display: block !important;
 }
 
@@ -258,11 +257,6 @@ label {
 
 .radio-field>div label:first-of-type {
   margin-right: 2rem;
-}
-
-input[type='radio'] {
-  margin-top: 0;
-  border: 1px solid red;
 }
 
 .form-field {
